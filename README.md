@@ -1,21 +1,21 @@
-# cacheman-mongo
+# JohnnyCache
 
-[![Build Status](https://travis-ci.org/cayasso/cacheman-mongo.png?branch=master)](https://travis-ci.org/cayasso/cacheman-mongo)
-[![NPM version](https://badge.fury.io/js/cacheman-mongo.png)](http://badge.fury.io/js/cacheman-mongo)
+MongoDB standalone caching library for Node.js. It is a fork of [cacheman-mongo](https://travis-ci.org/cayasso/cacheman-mongo).
+The main difference between JohnnyCache and the original Cacheman is that JohnnyCache can be configured with a Mongo connection string.
 
-MongoDB standalone caching library for Node.JS and also cache engine for [cacheman](https://github.com/cayasso/cacheman).
+Also, I cleaned up the code a little bit.
 
-## Instalation
+## Installation
 
 ``` bash
-$ npm install cacheman-mongo
+$ npm install johnny-cache
 ```
 
 ## Usage
 
 ```javascript
-var CachemanMongo = require('cacheman-mongo');
-var cache = new CachemanMongo();
+var JohnnyCache = require('johnny-cache');
+var cache = new JohnnyCache();
 
 // set the value
 cache.set('my key', { foo: 'bar' }, function (error) {
@@ -43,19 +43,17 @@ cache.set('my key', { foo: 'bar' }, function (error) {
 
 ## API
 
-### CachemanMongo([options])
+### JohnnyCache([options])
 
 Create `cacheman-mongo` instance. `options` are mongo valid options including `port`, `host`, `db` and `collection`.
 
 ```javascript
 var options = { 
-  port: 9999,
-  host: '127.0.0.1',
-  db: 'my-cache-db',
+  db: 'mongo://localhost/mymongo',
   collection: 'my-collection'
 };
 
-var cache = new CachemanMongo(options);
+var cache = new JohnnyCache(options);
 ```
 
 ### cache.set(key, value, [ttl, [fn]])
@@ -122,7 +120,7 @@ $ make test
 
 (The MIT License)
 
-Copyright (c) 2013 Jonathan Brumley &lt;cayasso@gmail.com&gt;
+Copyright (c) 2014 Terrence C. Watson &lt;terrence.watson@contractor.cengage.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

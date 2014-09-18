@@ -1,5 +1,5 @@
 {
-  "name": "cachehobbit-mongo",
+  "name": "johnny-cache",
   "version": "0.1.0",
   "description": "MongoDB standalone caching library for Node.JS",
   "author": "Terrence Watson <terrence.watson@contractor.cengage.com>",
@@ -17,8 +17,7 @@
     "caching",
     "mongo",
     "store",
-    "ttl",
-    "cacheman"
+    "ttl"
   ],
   "license": "MIT",
   "devDependencies": {
