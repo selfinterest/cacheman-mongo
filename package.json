@@ -1,6 +1,6 @@
 {
   "name": "johnny-cache",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MongoDB standalone caching library for Node.JS",
   "author": "Terrence Watson <terrence.watson@contractor.cengage.com>",
   "main": "index.js",
