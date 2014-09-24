@@ -45,7 +45,7 @@ cache.set('my key', { foo: 'bar' }, function (error) {
 
 ### JohnnyCache([options])
 
-Create `cacheman-mongo` instance. `options` are mongo valid options including `port`, `host`, `db` and `collection`.
+Create `johnny-cache` instance. `options` is a map, with db and collection properties.
 
 ```javascript
 var options = { 
